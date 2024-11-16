@@ -1,1 +1,2 @@
 # MY-PROTFOLIO
+A personal portfolio website built using HTML and CSS, showcasing your web development and design skills. It features an introduction with a bio, a project showcase, a blog section for content management simulation, and a contact form. The site is fully responsive, ensuring an optimal viewing experience across devices, and includes social media links and copyright information in the footer.
