@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Hashed Password Cracker Code</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 2rem;
+        }
+        pre {
+            background-color: #eeeeee;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: auto;
+            white-space: pre-wrap;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Port Scanner Code</h1>
+    <p>This is the source code for the Non-Hashed Password Cracker project:</p>
+    <pre>
+        import socket
+
+        # Define the target IP and port range
+        target_ip = "192.168.1.1"  # Replace with the actual target IP
+        start_port = 1
+        end_port = 1024
+        
+        # Function to scan a port
+        def port_scanner(ip, port):
+            try:
+                sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                sock.settimeout(0.5)  # Set a timeout to improve scan speed
+                result = sock.connect_ex((ip, port))
+                if result == 0:
+                    print(f"Port {port}: OPEN")
+                sock.close()
+            except Exception as e:
+                print(f"Error scanning port {port}: {e}")
+        
+        # Loop through the port range
+        print(f"Scanning {target_ip} from port {start_port} to {end_port}")
+        for port in range(start_port, end_port + 1):
+            port_scanner(target_ip, port)
+        
+
+    </pre>
+    <p><a href="index.html">Go Back to Portfolio</a></p>
+</body>
+</html>
